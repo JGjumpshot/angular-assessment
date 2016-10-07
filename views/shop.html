@@ -1,7 +1,12 @@
 <div class="product-grid__item   grid__item one-half large--one-third" >
 
     <!--Repeat over your data and display it below -->
-
+<ul>
+  <li ng-repeat="product in products">
+    <div ui-sref="product-details">{{product.title}}</div>
+    <img src="{{product.image}}" />
+  </li>
+</ul>
     <!--Product skeleton-->
         <!--Product Image-->
         <!--Product Image click collapse the image-->
@@ -11,13 +16,13 @@
         <a class="product-grid__product">
             show image
         </a>
-
+    <product-directive products = 'products'></product-directive>
         <!--Product Meta-->
         <div class="product-grid__meta">
             <!--Title click Should redirect to the product-details section. remember to pass along the product id so you can make an api call
         to get the specific product details-->
             <h3 class="product-grid__name"><a><!--Title--></a></h3>
-            
+
             <!--Product Description-->
             <h4 class="product-grid__sub"><!--Desc--></h4>
 
