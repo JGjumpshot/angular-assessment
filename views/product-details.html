@@ -1,20 +1,27 @@
 <div class="product-grid__item  grid__item one-half large--one-third" >
 
+
+  <!-- <ul>
+    <li ng-repeat="product in products" ng-show='image'>
+      <div ui-sref="product-details({id: product.id})">{{product.title}}</div>
+      <img src="{{product.image}}" ng-click='toggle()'/>
+    </li>
+  </ul> -->
     <!--Product Image-->
-    <a class="product-grid__product">
-        <img class="product-grid__img"  sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
+    <a class="product-grid__product" ng-show="image">
+        <img ng-src="{{product.image}}" class="product-grid__img" ng-click="toggle()" sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
     </a>
 
     <!--Product Meta-->
     <div class="product-grid__meta">
         <!-- Title-->
-        <!-- {{product.title}} -->
+        {{product.title}}
         <h3 class="product-grid__name"><a><!--Title--></a></h3>
         <!--Product Description-->
         <h4 class="product-grid__sub"><!--Desc--></h4>
-        <!-- {{product.desc}} -->
+        {{product.desc}}
         <!--Product Price-->
         <div class="product-grid__price"><!--Price--></div>
-        <!-- {{product.price}} -->
+        {{product.price}}
     </div>
 </div>

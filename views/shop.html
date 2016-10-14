@@ -2,18 +2,18 @@
 
     <!--Repeat over your data and display it below -->
 <ul>
-  <li ng-repeat="product in products">
-    <div ui-sref="product-details">{{product.title}}</div>
-    <img src="{{product.image}}" />
+  <li ng-repeat="product in products" ng-show='image'>
+    <div ui-sref="product-details({id: '{{product.id}}'})">{{product.title}}</div>
+    <img src="{{product.image}}" ng-click='toggle()'/>
   </li>
 </ul>
     <!--Product skeleton-->
         <!--Product Image-->
         <!--Product Image click collapse the image-->
         <a class="product-grid__product" >
-            <img class="product-grid__img"   sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
+            <img class="product-grid__img"  sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
         </a>
-        <a class="product-grid__product">
+        <a class="product-grid__product" ng-click='toggle()'>
             show image
         </a>
     <product-directive products = 'products'></product-directive>

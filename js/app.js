@@ -14,7 +14,7 @@ angular.module('assessment', ['ui.router'])
     templateUrl: '../views/about.html'
   })
   .state('product-details', {
-    url: '/product-details',
+    url: '/product-details/:id',
     controller: 'productCtrl',
     templateUrl: '../views/product-details.html'
   })
